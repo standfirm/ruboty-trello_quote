@@ -1,7 +1,4 @@
 require "ruboty/trello_quote/version"
 
-module Ruboty
-  module TrelloQuote
-    # Your code goes here...
-  end
-end
+require 'ruboty/handlers/trello_quote'
+require 'ruboty/trello_quote/Actions/quote'

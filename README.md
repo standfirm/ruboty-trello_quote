@@ -1,6 +1,6 @@
 # Ruboty::TrelloQuote
 
-TODO: Write a gem description
+Ruboty plugin to quote trello card description.
 
 ## Installation
 
@@ -13,10 +13,6 @@ gem 'ruboty-trello_quote'
 And then execute:
 
     $ bundle
-
-Or install it yourself as:
-
-    $ gem install ruboty-trello_quote
 
 ## Usage
 
