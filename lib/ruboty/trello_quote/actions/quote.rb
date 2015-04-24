@@ -34,7 +34,7 @@ module Ruboty
         end
 
         def card_id
-          message[:id]
+          message[:id].to_s.strip
         end
       end
     end
