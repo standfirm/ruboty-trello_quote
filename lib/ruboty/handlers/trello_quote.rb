@@ -1,7 +1,7 @@
 module Ruboty
   module Handlers
     class TrelloQuote < Base
-      on(%r{.*https?://trello.com/c/(?<id>[^/]+).*},
+      on(%r{.*https?://trello.com/c/(?<id>[a-zA-Z0-9]+).*},
          description: 'quote trello card',
          name: :quote,
          all: true)
