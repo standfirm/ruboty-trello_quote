@@ -7,6 +7,7 @@ module Ruboty
         attr_reader :message
 
         def initialize(message)
+          return if skip?
           @message = message
 
           Trello.configure do |config|
@@ -35,6 +36,13 @@ module Ruboty
 
         def card_id
           message[:id].to_s.strip
+        end
+
+        def skip?
+          regexp = ENV['TRELLO_IGNORE_USER']
+          if regexp
+            message.from_name =~ /#{regexp}/
+          end
         end
       end
     end
