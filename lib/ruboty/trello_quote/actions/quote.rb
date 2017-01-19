@@ -7,7 +7,6 @@ module Ruboty
         attr_reader :message
 
         def initialize(message)
-          return if skip?
           @message = message
 
           Trello.configure do |config|
@@ -17,6 +16,7 @@ module Ruboty
         end
 
         def call
+          return if skip?
           message.reply "* #{name}\n#{desc}"
         end
 
